@@ -58,7 +58,6 @@ typedef struct specifier
 	int (*f)(va_list, params_t *);
 } specifier_t;
 
-int printf_pointer(va_list ap, params_t *params);
 int printf_percent(va_list ap, params_t *params);
 int printf_int(va_list ap, params_t *params);
 int printf_char(va_list ap, params_t *params);
@@ -67,13 +66,12 @@ int print_S(va_list ap, params_t params);
 
 int print_octal(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
-int print_hex(va_list ap, params_t params);
-int print_HEX(va_list ap, params_t params);
-int print_octal(va_list ap, params_t *params);
+int print_hex(va_list ap, params_t *params);
+int print_HEX(va_list ap, params_t *params);
 
 char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
-int print_address(va_list ap, params_t params);
+int print_address(va_list ap, params_t *params);
 
 int _putchar(int c);
 int _puts(char *str);
