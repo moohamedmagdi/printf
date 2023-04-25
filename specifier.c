@@ -7,7 +7,7 @@
  * Return: numb of bytes
  */
 
-int (*get_specifier(char *S))(va_list ap, params_t *params)
+int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
 		{"c", printf_char},
