@@ -10,7 +10,7 @@
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-#define PARAMS_INIT {0,0,0,0,0,0,0,0,0,0}
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 
 /**
@@ -48,7 +48,7 @@ int _puts(char *str);
 
 int _printf(const char *format, ...);
 
-void init_params(params_t *params,va_list ap);
+void init_params(params_t *params, va_list ap);
 
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
