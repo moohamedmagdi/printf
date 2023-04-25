@@ -20,12 +20,27 @@
  * struct parameters - params struct
  * @precision: precision specified
  * @unsign: unsigned value
+ * @plus_flag: on if plus_flag specified
+ * @space_flag: on if hashtag_flag specified
+ * @hashtag_flag: on if _flag specified
+ * @zero_flag: on if _flag specified
+ * @minus_flag: on if _flag specified
+ * @width: field width specified
+ * @i_modifier: on if i_modifier is specified
+ * @h_modifier: on if h_modifier is specified
  */
 
 typedef struct parameters
 {
-	unsigned int unsign :		1;
-
+	unsigned int unsign             : 1;
+	unsigned int plus_flag          : 1;
+	unsigned int h_modifier         : 1;
+	unsigned int i_modifier         : 1;
+	unsigned int space_flag         : 1;
+	unsigned int hashtag_flag       : 1;
+	unsigned int zero_flag          : 1;
+	unsigned int minus_flag         : 1;
+	unsigned int width;
 	unsigned int precision;
 } params_t;
 
@@ -46,6 +61,7 @@ int printf_percent(va_list ap, params_t *params);
 int printf_int(va_list ap, params_t *params);
 int printf_char(va_list ap, params_t *params);
 int printf_string(va_list ap, params_t *params);
+
 
 char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
