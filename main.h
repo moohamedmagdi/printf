@@ -28,8 +28,8 @@
  * @zero_flag: on if _flag specified
  * @minus_flag: on if _flag specified
  * @width: field width specified
- * @i_modifier: on if i_modifier is specified
- * @h_modifier: on if h_modifier is specified
+ * @l_modifier: on if l_modifier is specified
+ * @h_modifier: on if h_modifier is specified 
  */
 
 typedef struct parameters
@@ -37,7 +37,7 @@ typedef struct parameters
 	unsigned int unsign             : 1;
 	unsigned int plus_flag          : 1;
 	unsigned int h_modifier         : 1;
-	unsigned int i_modifier         : 1;
+	unsigned int l_modifier         : 1;
 	unsigned int space_flag         : 1;
 	unsigned int hashtag_flag       : 1;
 	unsigned int zero_flag          : 1;
@@ -63,12 +63,12 @@ int printf_percent(va_list ap, params_t *params);
 int printf_int(va_list ap, params_t *params);
 int printf_char(va_list ap, params_t *params);
 int printf_string(va_list ap, params_t *params);
-int print_S (va_list ap, params_t params);
+int print_S(va_list ap, params_t params);
 
 int print_octal(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
-int print_hex(va_list ap, params_t params); /* hex lowercase */
-int print_HEX(va_list ap, params_t params); /* hex uppercase */
+int print_hex(va_list ap, params_t params);
+int print_HEX(va_list ap, params_t params); 
 int print_octal(va_list ap, params_t *params);
 
 char *convert(long int num, int base, int flags, params_t *params);
@@ -80,8 +80,6 @@ int _puts(char *str);
 
 char *get_precision(char *p, params_t *params, va_list ap);
 
-int _printf(const char *format, ...);
-
 void init_params(params_t *params, va_list ap);
 
 int get_modifier(char *s, params_t *params);
@@ -90,7 +88,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int *get_width(char *s, params_t *params, va_list ap);
-int print_rev(va_list ap, params_t params);/*t-13*/
+int print_rev(va_list ap, params_t params);
 int print_rot13(va_list ap, params_t params);
 
 int _isdigit(int c);
@@ -98,6 +96,8 @@ int _strlen(char *s);
 int print_number(char *str, params_t *params);
 int print_number_right_shift(char *str, params_t *params);
 int print_number_left_shift(char *str, params_t *params);
+
+int _printf(const char *format, ...);
 
 #endif
 
