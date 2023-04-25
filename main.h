@@ -63,6 +63,7 @@ int printf_percent(va_list ap, params_t *params);
 int printf_int(va_list ap, params_t *params);
 int printf_char(va_list ap, params_t *params);
 int printf_string(va_list ap, params_t *params);
+int print_S (va_list ap, params_t params);
 
 int print_octal(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
@@ -77,6 +78,8 @@ int print_address(va_list ap, params_t params);
 int _putchar(int c);
 int _puts(char *str);
 
+char *get_precision(char *p, params_t *params, va_list ap);
+
 int _printf(const char *format, ...);
 
 void init_params(params_t *params, va_list ap);
@@ -85,6 +88,10 @@ int get_modifier(char *s, params_t *params);
 int print_from_to(char *start, char *stop, char *except);
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
+int get_flag(char *s, params_t *params);
+int *get_width(char *s, params_t *params, va_list ap);
+int print_rev(va_list ap, params_t params);/*t-13*/
+int print_rot13(va_list ap, params_t params);
 
 int _isdigit(int c);
 int _strlen(char *s);
