@@ -20,16 +20,16 @@
 
 /**
  * struct parameters - params struct
- * @precision: precision specified
  * @unsign: unsigned value
  * @plus_flag: on if plus_flag specified
+ * @h_modifier: on if h_modifier is specified
+ * @l_modifier: on if l_modifier is specified
  * @space_flag: on if hashtag_flag specified
  * @hashtag_flag: on if _flag specified
  * @zero_flag: on if _flag specified
  * @minus_flag: on if _flag specified
  * @width: field width specified
- * @l_modifier: on if l_modifier is specified
- * @h_modifier: on if h_modifier is specified
+ * @precision: precision specified
  */
 
 typedef struct parameters
