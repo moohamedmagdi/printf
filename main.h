@@ -7,6 +7,8 @@
 #include <limits.h>
 #include <unistd.h>
 
+#define NULL_STRING "(null)"
+
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
