@@ -62,7 +62,7 @@ int printf_percent(va_list ap, params_t *params);
 int printf_int(va_list ap, params_t *params);
 int printf_char(va_list ap, params_t *params);
 int printf_string(va_list ap, params_t *params);
-int print_S(va_list ap, params_t params);
+int print_S(va_list ap, params_t *params);
 
 int print_octal(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
