@@ -85,9 +85,9 @@ int print_from_to(char *start, char *stop, char *except);
 int (*get_specifier(char *s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
-int *get_width(char *s, params_t *params, va_list ap);
-int print_rev(va_list ap, params_t params);
-int print_rot13(va_list ap, params_t params);
+char *get_width(char *s, params_t *params, va_list ap);
+int print_rev(va_list ap, params_t *params);
+int print_rot13(va_list ap, params_t *params);
 
 int _isdigit(int c);
 int _strlen(char *s);
