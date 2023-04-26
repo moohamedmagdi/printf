@@ -61,12 +61,13 @@ int print_number(char *str, params_t *params)
 }
 
 /**
- * print_number_right_shift - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ * print_number_right_shift - print num
+ * @str: base numb as str
+ * @params: param struct
  *
- * Return: chars printed
+ * Return: char
  */
+
 int print_number_right_shift(char *str, params_t *params)
 {
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
@@ -103,12 +104,13 @@ int print_number_right_shift(char *str, params_t *params)
 }
 
 /**
- * print_number_left_shift - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ * print_number_left_shift - print num
+ * @str: base num as str
+ * @params: parameter struct
  *
- * Return: chars printed
+ * Return: char
  */
+
 int print_number_left_shift(char *str, params_t *params)
 {
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
@@ -131,3 +133,4 @@ int print_number_left_shift(char *str, params_t *params)
 		n += _putchar(pad_char);
 	return (n);
 }
+
